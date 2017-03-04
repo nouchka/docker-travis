@@ -15,4 +15,4 @@ VOLUME /travis
 VOLUME /workspace
 WORKDIR /workspace
 
-ENTRYPOINT ["/usr/bin/travis"]
+ENTRYPOINT ["/usr/local/bin/travis"]
