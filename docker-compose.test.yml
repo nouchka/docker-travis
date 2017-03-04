@@ -1,0 +1,7 @@
+version: '2'
+
+services:
+  sut:
+    build: .
+    image: nouchka/travis-cli:latest
+    entrypoint: bash -c "travis version"

@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  travis:
+    image: nouchka/travis-cli:latest
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./project/:/workspace/
+      - conf:/travis/
+
+volumes:
+  conf:
+    driver: local
+
