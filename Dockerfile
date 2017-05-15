@@ -5,7 +5,7 @@ LABEL version="latest"
 
 RUN apt-get update --fix-missing && \
 	apt-get update && \
-	apt-get install -y -q ruby ruby-dev build-essential
+	apt-get install -y -q ruby ruby-dev build-essential git
 
 RUN gem install travis --no-rdoc --no-ri
 

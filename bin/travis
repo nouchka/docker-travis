@@ -1,0 +1,9 @@
+#!/bin/bash
+
+mkdir -p $HOME/.travis
+
+docker run -it --rm \
+	-v $HOME/.travis/:/travis/ \
+	-v $(pwd):/home/developer/workspace \
+	-v $HOME/.travis/:/home/developer/.travis \
+	nouchka/travis-cli "$@"
