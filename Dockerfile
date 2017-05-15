@@ -9,8 +9,7 @@ RUN apt-get update --fix-missing && \
 
 RUN gem install travis --no-rdoc --no-ri
 
-ENV TRAVIS_CONFIG_PATH /travis
-VOLUME /travis
+ENV TRAVIS_CONFIG_PATH /home/developer/.travis
 
 RUN export uid=1000 gid=1000 && \
     mkdir -p /home/developer && \
@@ -21,5 +20,7 @@ RUN export uid=1000 gid=1000 && \
 WORKDIR /home/developer/workspace/
 VOLUME /home/developer/workspace/
 USER developer
+
+RUN mkdir -p /home/developer/.travis
 
 ENTRYPOINT ["/usr/local/bin/travis"]
