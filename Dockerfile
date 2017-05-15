@@ -12,7 +12,14 @@ RUN gem install travis --no-rdoc --no-ri
 ENV TRAVIS_CONFIG_PATH /travis
 VOLUME /travis
 
-VOLUME /workspace
-WORKDIR /workspace
+RUN export uid=1000 gid=1000 && \
+    mkdir -p /home/developer && \
+    echo "developer:x:${uid}:${gid}:Developer,,,:/home/developer:/bin/bash" >> /etc/passwd && \
+    echo "developer:x:${uid}:" >> /etc/group && \
+    chown ${uid}:${gid} -R /home/developer
+
+WORKDIR /home/developer/workspace/
+VOLUME /home/developer/workspace/
+USER developer
 
 ENTRYPOINT ["/usr/local/bin/travis"]

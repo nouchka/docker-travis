@@ -6,7 +6,7 @@ services:
     stdin_open: true
     tty: true
     volumes:
-      - ./project/:/workspace/
+      - ./project/:/home/developer/workspace/
       - conf:/travis/
 
 volumes:
