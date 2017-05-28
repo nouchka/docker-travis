@@ -6,10 +6,6 @@
 [![](https://images.microbadger.com/badges/version/nouchka/travis-cli.svg)](https://microbadger.com/images/nouchka/travis-cli "Get your own version badge on microbadger.com")
 [![Docker Automated buil](https://img.shields.io/docker/automated/nouchka/travis-cli.svg)](https://hub.docker.com/r/nouchka/travis-cli/)
 [![Build Status](https://travis-ci.org/nouchka/docker-travis-cli.svg?branch=master)](https://travis-ci.org/nouchka/docker-travis-cli)
-<!---
-[![Docker Stars](https://img.shields.io/docker/stars/nouchka/docker-travis-cli.svg)](https://hub.docker.com/r/nouchka/travis-cli/)
-[![Docker Pulls](https://img.shields.io/docker/pulls/nouchka/docker-travis-cli.svg)]()
---->
 
 # Versions
 
