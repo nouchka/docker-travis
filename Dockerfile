@@ -1,5 +1,5 @@
 FROM debian:jessie
-MAINTAINER Jean-Avit Promis "docker@katagena.com"
+LABEL maintainer="Jean-Avit Promis docker@katagena.com"
 LABEL org.label-schema.vcs-url="https://github.com/nouchka/docker-travis-cli"
 LABEL version="latest"
 
